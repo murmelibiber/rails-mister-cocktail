@@ -1,0 +1,22 @@
+<h1>Presents for Marianne and Linus</h1>
+
+<%= link_to 'add a new guest', new_guest_path, class:"btn btn-success" %>
+</br>
+
+<div class="list-group">
+<% @guests.each do |guest| %>
+<%= link_to guest_path(guest) do %>
+<div class="list-group-item">
+  <%= guest.name %>
+  </div>
+<% end %>
+<% end %>
+</div>
+
+
+
+
+
+
+
+

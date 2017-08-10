@@ -1,0 +1,48 @@
+<div class="container">
+<h1><%= @guest.name %></h1>
+
+<%= link_to 'back', guests_path, class:"btn btn-danger"%>
+
+<p>This guest's name ;)  <%= @guest.name%> </p>
+
+
+
+<%= simple_form_for [@guest, @amount] do |f| %>
+<h4>Amounts:</h4>
+<%= f.input :desc, placeholder: 'how much' %>
+<%= f.input :present_id, collection: Present.order(name: :asc).all %>
+<%= f.submit "CREATE", class:"btn btn-primary"%>
+<% end %>
+<ul>
+  <% @guest.amounts.each do |amount| %>
+<li><%= amount.desc %> of <%= amount.present.name %> (<%= link_to 'remooove', amount_path(amount), method: :delete %>) </li>
+  <% end %>
+</ul>
+
+<div class="list-group">
+<% @guest.amounts.each do |amount| %>
+
+<div class="list-group-item">
+<p><%= Present.find(amount.present_id).name%></p>
+<p><%= amount.desc%></p>
+</div>
+
+<% end %>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
