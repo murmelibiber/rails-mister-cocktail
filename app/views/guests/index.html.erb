@@ -1,8 +1,10 @@
+<div class="container">
 <h1>Presents for Marianne and Linus</h1>
 
 <%= link_to 'add a new guest', new_guest_path, class:"btn btn-success" %>
 </br>
 
+<div class="listitemstobi">
 <div class="list-group">
 <% @guests.each do |guest| %>
 <%= link_to guest_path(guest) do %>
@@ -12,7 +14,8 @@
 <% end %>
 <% end %>
 </div>
-
+</div>
+</div>
 
 
 
