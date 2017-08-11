@@ -25,9 +25,9 @@ class GuestsController < ApplicationController
 
 
   def destroy
-    # @guest = Amount.find(params[:id])
-    # @amount.destroy
-    # redirect_to guest_path(@amount.guest)
+     @guest = Guest.find(params[:id])
+     @guest.destroy
+     redirect_to guests_path
   end
 
 
