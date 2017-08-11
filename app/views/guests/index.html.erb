@@ -7,6 +7,9 @@
 <%= link_to 'add a new guest', new_guest_path, class:"btn btn-success" %>
 </br>
 
+<%= cl_image_tag("rfvnniolmmnpbrbk3hhj",
+      width: 400, height: 300, crop: :fill) %>
+
 <div class="listitemstobi">
 <div class="list-group">
 <% @guests.each do |guest| %>

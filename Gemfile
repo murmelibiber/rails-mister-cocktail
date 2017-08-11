@@ -7,7 +7,13 @@ end
 
 gem 'figaro'
 gem 'cloudinary'
-
+group :development, :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'launchy'
+  gem 'minitest-reporters'
+  # [...]
+end
 
 
 
