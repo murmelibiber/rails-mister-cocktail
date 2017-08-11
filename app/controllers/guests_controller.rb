@@ -23,13 +23,11 @@ class GuestsController < ApplicationController
       end
   end
 
-  def edit
-  end
-
-  def update
-  end
 
   def destroy
+    # @guest = Amount.find(params[:id])
+    # @amount.destroy
+    # redirect_to guest_path(@amount.guest)
   end
 
 

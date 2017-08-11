@@ -2,6 +2,7 @@
 <h1><%= @guest.name %></h1>
 
 <%= link_to 'back', guests_path, class:"btn btn-danger"%>
+<%= link_to 'remove this guest', guest_path(@guest), method: :delete %>
 
 <p>This guest's name ;)  <%= @guest.name%> </p>
 
